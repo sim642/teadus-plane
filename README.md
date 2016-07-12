@@ -1,2 +1,2 @@
 # teadus-plane
-Teaduslaager 2016 lennuki tarkvara
+Teaduslaager 2016 plane software
