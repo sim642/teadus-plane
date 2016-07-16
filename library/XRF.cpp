@@ -1,5 +1,10 @@
 #include "XRF.h"
 
+XRF::XRF()
+{
+  Serial.begin(9600);
+}
+
 void XRF::write(Command command)
 {
   Serial.print(command.serialize());
