@@ -7,7 +7,7 @@ void XRF::write(Command command)
 
 Command XRF::read()
 {
-  char str[13];
+  char str[Command::LENGTH + 1];
   Serial.readBytes(str, sizeof(str));
   return Command::deserialize(String(str));
 }

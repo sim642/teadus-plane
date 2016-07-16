@@ -6,6 +6,8 @@
 class Command
 {
   public:
+    static constexpr int LENGTH = 12;
+
     String serialize() const;
     static Command deserialize(String str);
 

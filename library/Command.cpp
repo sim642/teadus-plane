@@ -4,7 +4,7 @@
 
 String Command::serialize() const
 {
-  char str[13];
+  char str[LENGTH + 1];
   snprintf(str, sizeof(str), "a%.3X%.3X-----", x, y);
   return String(str);
 }
