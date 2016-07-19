@@ -8,7 +8,7 @@
 class XRF
 {
   public:
-    XRF();
+    void begin();
 
     void write(Command command);
     Command read();

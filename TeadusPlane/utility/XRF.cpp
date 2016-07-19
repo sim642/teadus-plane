@@ -1,6 +1,6 @@
 #include "XRF.h"
 
-XRF::XRF()
+void XRF::begin()
 {
   Serial.begin(9600);
 }

@@ -1,4 +1,4 @@
-#include <XRF.h>
+#include <TeadusPlane.h>
 #include "Joystick.h"
 
 XRF xrf;
@@ -7,7 +7,7 @@ Joystick right(2, 1);
 Joystick left(4, 5);
 
 void setup() {
-  Serial.begin(9600);
+  xrf.begin();
   
   pinMode(13, OUTPUT);
 }
@@ -19,7 +19,6 @@ void loop() {
   command.z = left.getX();
   command.w = left.getY();
   xrf.write(command);
-  //Serial.print("abc");
 
   /*digitalWrite(13, HIGH);
   delay(100);
