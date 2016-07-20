@@ -6,7 +6,7 @@
 class Axis
 {
   public:
-    Axis(int pin, int center = 512, int threshold = 3);
+    Axis(int pin, int center = 512, bool inverted = false, int threshold = 3);
 
     int getRaw();
     int get();
@@ -14,6 +14,7 @@ class Axis
   private:
     int _pin;
     int _center;
+    bool _inverted;
     int _threshold;
 };
 

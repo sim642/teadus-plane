@@ -5,8 +5,8 @@ XRF xrf;
 
 Axis x(2, 498);
 Axis y(1, 535);
-Axis z(4, 522);
-Axis w(5, 517);
+Axis z(4, 1023 - 522, true);
+Axis w(5, 1023 - 517, true);
 
 void setup() {
   xrf.begin();

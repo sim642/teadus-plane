@@ -1,13 +1,14 @@
 #include "Axis.h"
 
-Axis::Axis(int pin, int center, int threshold) : _pin(pin), _center(center), _threshold(threshold)
+Axis::Axis(int pin, int center, bool inverted, int threshold) : _pin(pin), _center(center), _inverted(inverted), _threshold(threshold)
 {
 
 }
 
 int Axis::getRaw()
 {
-  return analogRead(_pin);
+  int raw = analogRead(_pin);
+  return _inverted ? 1023 - raw : raw;
 }
 
 int Axis::get()
