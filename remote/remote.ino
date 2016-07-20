@@ -1,10 +1,9 @@
 #include <TeadusPlane.h>
-#include "Joystick.h"
+#include "Axis.h"
 
 XRF xrf;
 
-Joystick right(2, 1);
-Joystick left(4, 5);
+Axis x(2), y(1), z(4), w(5);
 
 void setup() {
   xrf.begin();
@@ -14,10 +13,10 @@ void setup() {
 
 void loop() {
   Command command;
-  command.x = right.getX();
-  command.y = right.getY();
-  command.z = left.getX();
-  command.w = left.getY();
+  command.x = x.get();
+  command.y = y.get();
+  command.z = z.get();
+  command.w = w.get();
   xrf.write(command);
 
   /*digitalWrite(13, HIGH);
