@@ -11,7 +11,7 @@ class Command
     String serialize() const;
     static Command deserialize(String str);
 
-    int x, y;
+    int x, y, z, w;
 
   private:
     static int hex2int(String str);
