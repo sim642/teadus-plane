@@ -6,7 +6,7 @@
 class Axis
 {
   public:
-    Axis(int pin, int center = 512, int threshold = 10);
+    Axis(int pin, int center = 512, int threshold = 3);
 
     int getRaw();
     int get();

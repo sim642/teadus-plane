@@ -3,7 +3,10 @@
 
 XRF xrf;
 
-Axis x(2), y(1), z(4), w(5);
+Axis x(2, 498);
+Axis y(1, 535);
+Axis z(4, 522);
+Axis w(5, 517);
 
 void setup() {
   xrf.begin();
@@ -11,7 +14,31 @@ void setup() {
   pinMode(13, OUTPUT);
 }
 
-void loop() {
+void loopDebugRaw() {
+  Serial.print(x.getRaw());
+  Serial.print("\t");
+  Serial.print(y.getRaw());
+  Serial.print("\t");
+  Serial.print(z.getRaw());
+  Serial.print("\t");
+  Serial.println(w.getRaw());
+
+  delay(100);
+}
+
+void loopDebug() {
+  Serial.print(x.get());
+  Serial.print("\t");
+  Serial.print(y.get());
+  Serial.print("\t");
+  Serial.print(z.get());
+  Serial.print("\t");
+  Serial.println(w.get());
+
+  delay(100);
+}
+
+void loopMain() {
   Command command;
   command.x = x.get();
   command.y = y.get();
@@ -25,4 +52,8 @@ void loop() {
   delay(100);*/
 
   delay(100);
+}
+
+void loop() {
+  loopMain();
 }
