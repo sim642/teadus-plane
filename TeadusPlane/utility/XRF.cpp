@@ -12,6 +12,9 @@ void XRF::write(Command command)
 
 Command XRF::read()
 {
+  while (Serial.peek() != 'a')
+    Serial.read();
+
   char str[Command::LENGTH + 1];
   str[Command::LENGTH] = '\0';
   Serial.readBytes(str, Command::LENGTH);
