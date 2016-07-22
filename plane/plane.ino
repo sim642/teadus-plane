@@ -8,10 +8,10 @@ Servo x, y, z, w;
 void setup() {
   xrf.begin();
 
-  x.attach(6);
-  y.attach(7);
-  z.attach(8);
-  w.attach(9);
+  x.attach(2);
+  y.attach(3);
+  z.attach(4);
+  w.attach(5);
 }
 
 void loop() {
