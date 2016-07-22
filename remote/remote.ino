@@ -51,7 +51,7 @@ void loopMain() {
   digitalWrite(13, LOW);
   delay(100);*/
 
-  delay(100);
+  delay(50);
 }
 
 void loop() {
