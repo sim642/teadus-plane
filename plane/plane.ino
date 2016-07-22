@@ -19,7 +19,7 @@ void loop() {
   x.write(map(command.x, 0, 255, 0, 180));
   y.write(map(command.y, 0, 255, 0, 180));
   z.write(map(command.z, 0, 255, 0, 180));
-  w.writeMicroseconds(map(command.w, 0, 127, 1000, 700));
+  w.writeMicroseconds(map(command.w, 0, 127, 2000, 700));
   /*Serial.print(command.x);
   Serial.print("\t");
   Serial.print(command.y);
