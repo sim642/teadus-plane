@@ -2,6 +2,11 @@
 
 #include <stdio.h>
 
+Command::Command() : x(127), y(127), z(127), w(127)
+{
+
+}
+
 String Command::serialize() const
 {
   char str[LENGTH + 1];
