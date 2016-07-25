@@ -16,8 +16,8 @@ void setup() {
 
 void loop() {
   Command command = xrf.read();
-  x.write(map(command.x, 0, 255, 0, 180));
-  y.write(map(command.y, 0, 255, 0, 180));
+  x.write(map(command.x, 0, 255, 45, 135));
+  y.write(map(command.y, 0, 255, 135, 45));
   z.write(map(command.z, 0, 255, 0, 180));
   w.writeMicroseconds(map(command.w, 0, 127, 2000, 700));
   /*Serial.print(command.x);
