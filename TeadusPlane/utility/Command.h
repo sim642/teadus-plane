@@ -14,6 +14,7 @@ class Command
     static Command deserialize(String str);
 
     int x, y, z, w;
+    bool left, right;
 
   private:
     static int hex2int(String str);
