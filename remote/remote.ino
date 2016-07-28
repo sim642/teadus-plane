@@ -10,6 +10,9 @@ Axis w(5, 1023 - 517, true);
 
 void setup() {
   xrf.begin();
+
+  pinMode(8, INPUT);
+  pinMode(9, INPUT);
   
   pinMode(13, OUTPUT);
 }
@@ -44,6 +47,8 @@ void loopMain() {
   command.y = y.get();
   command.z = z.get();
   command.w = w.get();
+  command.left = !digitalRead(8);
+  command.right = !digitalRead(9);
   xrf.write(command);
 
   /*digitalWrite(13, HIGH);
