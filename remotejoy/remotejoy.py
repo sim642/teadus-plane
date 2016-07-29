@@ -10,6 +10,7 @@ events = (
     uinput.ABS_Y + (0, 255, 0, 0),
     uinput.ABS_Z + (0, 255, 0, 0),
     uinput.ABS_THROTTLE + (0, 255, 0, 0),
+    uinput.ABS_MISC + (0, 255, 0, 0),
 )
 
 with uinput.Device(events, name="TeadusPlane Remote") as device:
@@ -31,7 +32,8 @@ with uinput.Device(events, name="TeadusPlane Remote") as device:
         device.emit(uinput.ABS_X, x, syn=False)
         device.emit(uinput.ABS_Y, y, syn=False)
         device.emit(uinput.ABS_Z, z, syn=False)
-        device.emit(uinput.ABS_THROTTLE, w)
+        device.emit(uinput.ABS_THROTTLE, w, syn=False)
+        device.emit(uinput.ABS_MISC, 127)
         
         if left != prev_left:
             device.emit(uinput.BTN_THUMBL, left)
