@@ -9,6 +9,7 @@ class Axis
     Axis(int pin, int center = 512, bool inverted = false, int threshold = 3);
 
     int getRaw();
+    int getCentered();
     int get();
 
   private:
